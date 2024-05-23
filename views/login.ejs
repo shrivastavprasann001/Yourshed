@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page</title>
+    <link rel="stylesheet" href="/public/login.css" />
+  </head>
+  <body>
+    <form action="/yourshed/login" method="post">
+      <label for="email">Enter your email : </label>
+      <input name="email" type="email" id="email" /> <br />
+      <label for="password">Enter your password : </label>
+      <input name="password" type="password" id="password" /> <br />
+      <button type="submit">login</button>
+    </form>
+    <!-- <script>
+      document
+        .querySelector("form")
+        .addEventListener("submit", async function (event) {
+          event.preventDefault();
+          const formData = new FormData(this);
+          const response = await fetch("/login", {
+            method: "POST",
+            body: formData,
+          });
+          if (response.status === 404) {
+            alert("User does not exist");
+            window.location.href = "/yourshed/login";
+          } else if (response.status === 401) {
+            alert("Incorrect password");
+          } else if (response.ok) {
+            // Handle successful login, maybe redirect to another page
+            window.location.href = "/index";
+          }
+        });
+    </script> -->
+  </body>
+</html>
